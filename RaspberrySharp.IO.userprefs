@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="Tests/Test.Gpio.MCP3008/Test.Gpio.MCP3008.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Tests/Test.Gpio.DHT11/Program.cs">
+    <Files>
+      <File FileName="Tests/Test.Gpio.Pca9685/Program.cs" Line="52" Column="28" />
+      <File FileName="Tests/Test.Gpio.DHT11/Program.cs" Line="32" Column="95" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

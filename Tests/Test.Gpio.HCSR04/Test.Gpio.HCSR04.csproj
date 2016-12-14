@@ -55,15 +55,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Raspberry.System, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)packages\Raspberry.System.2.1\lib\net40\Raspberry.System.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="UnitsNet, Version=3.46.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)packages\UnitsNet.3.46.1\lib\net35\UnitsNet.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="UnitsNet">
+      <HintPath>..\..\packages\UnitsNet.Signed.3.48.1\lib\net35\UnitsNet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -87,10 +82,14 @@
       <Project>{D2E41147-5BF6-4109-A497-C76284F3C020}</Project>
       <Name>Raspberry.IO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Raspberry.System\Raspberry.System.csproj">
+      <Project>{2C0C9AAF-4EDD-4C79-961B-E7BC4FC4EB0C}</Project>
+      <Name>Raspberry.System</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="Properties\Test.Gpio.HCSR04.fzz" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Test.Gpio.HCSR04.png" />

@@ -11,6 +11,8 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,10 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Raspberry.System, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)packages\Raspberry.System.2.1\lib\net40\Raspberry.System.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Configuration" />
@@ -43,9 +41,8 @@
     <Reference Include="Common.Logging">
       <HintPath>$(SolutionDir)packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="UnitsNet, Version=3.46.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)packages\UnitsNet.3.46.1\lib\net35\UnitsNet.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="UnitsNet">
+      <HintPath>..\packages\UnitsNet.Signed.3.48.1\lib\net35\UnitsNet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +172,10 @@
     <ProjectReference Include="..\Raspberry.IO\Raspberry.IO.csproj">
       <Project>{ACE64F17-87E5-43E7-97A0-BDDE19059C61}</Project>
       <Name>Raspberry.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Raspberry.System\Raspberry.System.csproj">
+      <Project>{2C0C9AAF-4EDD-4C79-961B-E7BC4FC4EB0C}</Project>
+      <Name>Raspberry.System</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
